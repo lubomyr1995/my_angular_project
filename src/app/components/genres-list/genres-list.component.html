@@ -1,0 +1,8 @@
+<div [ngClass]="[isLight? 'bg2_light': 'bg2']" class="wrap_to_genres">
+  <div [ngClass]="[isLight? 'bg_light':'bg']" class="w20pr">
+    <app-genre-badge *ngFor="let genre of genres" [genre]="genre"></app-genre-badge>
+  </div>
+  <div class="w80pr">
+    <router-outlet></router-outlet>
+  </div>
+</div>

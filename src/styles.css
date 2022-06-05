@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.color_text {
+  color: #ff4646;
+}
+
+.text_snow {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+}
+
+.bg {
+  background: black;
+}
+
+.bg2 {
+  background: #262525;
+}
+
+.color_a_dark {
+  color: black;
+}
+
+.bg_light {
+  background: #f1f6f2;
+}
+
+.bg2_light {
+  background: snow;
+}
+
+.text_light {
+  color: #ffffff;
+}
+
+.text_dark {
+  color: black;
+}

@@ -1,0 +1,18 @@
+.wrap_main {
+  padding: 10px;
+}
+
+.wrap_movies {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.paginator {
+  color: #969191;
+  border-top: 2px solid #ff4646;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}

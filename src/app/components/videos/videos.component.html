@@ -1,0 +1,12 @@
+<div class="w700">
+  <ngb-carousel *ngIf="videos">
+    <ng-template ngbSlide *ngFor="let video of videos.results" class="w500">
+      <youtube-player
+        videoId="{{video.key}}"
+        suggestedQuality="highres"
+        [height]="370"
+        [width]="700">
+      </youtube-player>
+    </ng-template>
+  </ngb-carousel>
+</div>

@@ -1,0 +1,14 @@
+<div [ngClass]="[isLight? 'bg_light2': 'bg2']" class="wrap_main">
+  <div class="wrap_movies">
+    <app-movies-list-card *ngFor="let movie of movies" [movie]="movie" [genres]="genres"></app-movies-list-card>
+  </div>
+
+    <mat-paginator [ngClass]="[isLight? 'bg_light2': 'bg2']" class="paginator"
+                   [length]="500"
+                   [hidePageSize]="true"
+                   [showFirstLastButtons]="true"
+                   (page)="onPageChange($event)"
+                   [pageSize]="20">
+    </mat-paginator>
+
+</div>

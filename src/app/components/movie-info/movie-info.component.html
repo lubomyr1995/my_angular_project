@@ -1,0 +1,41 @@
+<div class="info" [ngClass]="[isLight? 'bg2_light': 'bg2']">
+  <div class="description">
+    <h2>{{info.original_title}}</h2>
+
+    <div><a href="{{info.homepage}}"> :Homepage</a></div>
+
+    <div class="wrap">
+      <span style="margin: 1px" *ngFor="let g of info.genres">
+        <a class="link_genre" [routerLink]="['/genres', g.id]">{{g.name}}</a>
+      </span>
+    </div>
+    <span class="rating" *ngIf="info.vote_average">Rating:
+      <ngx-material-rating [dense]="true" color="warn" [ngModel]="info.vote_average/2" [max]="5"></ngx-material-rating>
+      <span class="color_rating">{{info.vote_average}}</span>
+    </span>
+    <h5>Language: {{info.original_language}}</h5>
+    <h5>Revenue: {{info.revenue}}$</h5>
+    <h5>Budget: {{info.budget}}$</h5>
+    <h5>Vote count: {{info.vote_count}}</h5>
+    <p [ngClass]="[isLight? 'text_dark': 'text_light']">{{info.overview}}</p>
+    <hr>
+
+    <div class="image">
+      <h3 class="color_text">Images: </h3>
+      <div>
+        <app-image [images]="info.images"></app-image>
+      </div>
+    </div>
+
+  </div>
+  <div class="w40dg"><img style="width: 100%" src="https://image.tmdb.org/t/p/w500{{info.poster_path}}"
+                          alt="{{info.original_title}}"></div>
+</div>
+
+<div [ngClass]="isLight? 'bg2_light': 'bg2'" class="image">
+  <h3 class="color_text">Videos: </h3>
+  <div>
+    <app-videos [videos]="info.videos"></app-videos>
+  </div>
+</div>
+

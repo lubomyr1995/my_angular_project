@@ -1,0 +1,15 @@
+<div [ngClass]="[isLight? 'wrap_header bg_light' : 'wrap_header bg']">
+  <div><a href="https://www.themoviedb.org">
+    <img class="h50"
+         src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+         alt="logo">
+  </a>
+  </div>
+  <div routerLinkActive="active"><a [ngClass]="[isLight? 'color_a_dark': '']" [routerLink]="['movies']">Movies</a></div>
+  <div routerLinkActive="active"><a [ngClass]="[isLight? 'color_a_dark': '']" [routerLink]="['genres']">Genres</a></div>
+  <div>
+    <div routerLinkActive="active"><a [ngClass]="[isLight? 'color_a_dark': '']" class="fs18" [routerLink]="['userInfo']">Clementina DuBuque</a></div>
+    <mat-slide-toggle color="warn" (change)="onLightSwitch($event)"></mat-slide-toggle>
+  </div>
+</div>
+

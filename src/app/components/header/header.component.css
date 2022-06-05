@@ -1,0 +1,23 @@
+.wrap_header {
+  padding-left: 20px;
+  padding-right: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap_header > div > a {
+  font-size: 32px;
+}
+
+.active a {
+  color: #3edee3;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+.h50 {
+  height: 50px;
+}

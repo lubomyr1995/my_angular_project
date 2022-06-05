@@ -1,0 +1,12 @@
+.wrap_to_genres {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.w20pr {
+  width: 20%;
+}
+
+.w80pr {
+  width: 80%;
+}

@@ -1,0 +1,21 @@
+<div [ngClass]="isLight? 'bg_light' : 'bg2'" *ngIf="movie" class="card">
+  <div routerLink="/info/{{movie.id}}" >
+    <img style="width: 198px" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="{{movie.title}}">
+  </div>
+  <div class="card_text">
+    <h5 class="fs18 color_text ">{{movie.original_title}}</h5>
+
+    <div class="wrap">
+      <span style="margin: 1px" *ngFor="let g of marker">
+        <a class="link_genre" [routerLink]="['/genres', g.id]">{{g.name}}</a>
+      </span>
+    </div>
+
+    <span>Release: <i>{{movie.release_date}}</i></span>
+    <span> Popularity: <i>{{movie.popularity}}</i></span>
+    <span *ngIf="movie.vote_average">Rating:
+      <ngx-material-rating [dense]="true" color="warn" [ngModel]="movie.vote_average/2" [max]="5"></ngx-material-rating>
+      <span class="color_rating">{{movie.vote_average}}</span>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="carousel_img">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide *ngFor="let i of images.backdrops" class="w500">
+      <div>
+        <img style="width: 500px" src="https://image.tmdb.org/t/p/w500{{i.file_path}}" alt="{{i.vote_count}}">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
